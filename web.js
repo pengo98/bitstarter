@@ -8,8 +8,8 @@ app.get('/', function(request, response) {
     var data = fs.readFileSync('index.html');
     var buf = new Buffer(data);
 
-    //response.send(buf.toString('ascii',0,25));
-    response.send('blahal');
+    response.send(buf.toString('ascii',0,25));
+    //response.send('blahal');
 });
 
 var port = process.env.PORT || 5000;
